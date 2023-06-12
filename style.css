@@ -1,0 +1,84 @@
+.top {
+  height: 5rem;
+  /* position: -webkit-sticky;
+  position: fixed;
+  top: 0; */
+  width: 100%;
+  background-color: rgb(124 121 121);
+}
+.sidebar {
+  background-color: rgb(157 152 152);
+  /* height: 100vh; */
+  padding-right: 0 !important;
+  /* width: 10rem; */
+}
+.content {
+  /* padding: 60px 0 0 10px; */
+  padding-top: 85px;
+  padding-left: 60px !important;
+  align-items: center;
+  justify-content: space-between;
+}
+.submit_button {
+  padding-right: 5.56rem;
+  padding-top: 127px;
+}
+
+input {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 13px;
+  padding: 12px 20px;
+  width: 13rem;
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+  /* box-shadow: 5px 10px rgba(190, 185, 185, 0.2); */
+}
+.image-upload {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+  overflow-y: hidden;
+}
+input#fileinput {
+  display: none;
+}
+
+.image-upload img {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+  position: absolute;
+  top: 140px;
+  left: 452px;
+  color: var(--white);
+}
+
+select {
+  border: 1px solid #eee;
+  border-radius: 13px;
+  padding: 12px 20px;
+  width: 13rem;
+  box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+
+}
+a {
+  color: rgb(0, 0, 0) !important;
+}
+.nav:hover {
+  background-color: #eee;
+  transform: scale(1);
+}
+.country {
+  border: 1px solid #eee;
+  border-radius: 13px;
+  padding: 12px 20px;
+  width: 13.8125rem;
+}
+.lname {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 13px;
+  padding: 12px 20px;
+  width: 13.8125rem;
+}

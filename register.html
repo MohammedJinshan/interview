@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="margin: 0">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <div class="row">
+      <div class="col-12 top"></div>
+    </div>
+    <form action="">
+      <div class="row">
+        <div class="col-3 sidebar ps-5">
+          <div class="nav">
+            <a href="./users.html" class="mt-2" style="text-decoration: none"
+              >User List</a
+            >
+          </div>
+          <a class="nav mt-2" style="text-decoration: none"
+            >User Registration</a
+          >
+        </div>
+
+        <div class="col-9 content">
+          <div class="row">
+            <div class="col-4">
+              <label for="fileinput">
+                <!-- <img src="./profile.png" /> -->
+                <img
+                  class="image-upload"
+                  id="preview"
+                  src="./profile.png"
+                  alt="Selected Image"
+                />
+              </label>
+
+              <!-- <input id="fileinput" type="file" /> -->
+              <input
+                type="file"
+                id="fileinput"
+                onchange="previewImage(event)"
+                accept="image/*"
+              />
+            </div>
+
+            <div class="col-8 row">
+              <div class="col-6">
+                <input
+                  class="px-2"
+                  id="fname"
+                  type="text"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="col-6">
+                <input
+                  class="lname px-2"
+                  id="lname"
+                  type="text"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <!-- <div class="row mt-5"> -->
+
+              <div class="col-6 mt-5">
+                <select id="gender">
+                  <option value="0">Gender</option>
+                  <option value="1">Male</option>
+                  <option value="2">Female</option>
+                  <option value="3">Other</option>
+                </select>
+              </div>
+              <div class="col-6 mt-5">
+                <select class="country" id="country">
+                  <option value="0">Country</option>
+                  <option value="1">India</option>
+                  <option value="2">USA</option>
+                  <option value="3">UK</option>
+                  <option value="4">Germany</option>
+                  <option value="5">Japan</option>
+                  <option value="6">Russia</option>
+                  <option value="7">UAE</option>
+                  <option value="8">Saudi Arabia</option>
+                  <option value="9">Egypt</option>
+                  <option value="10">Türkiye</option>
+                  <option value="11">Israel</option>
+                  <option value="12">Spain</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-4">
+              <input class="px-2" id="email" type="email" placeholder="Email" />
+            </div>
+            <div class="col-4">
+              <input
+                class="px-2"
+                id="uname"
+                type="text"
+                placeholder="User Name"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                class="px-2"
+                id="password"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-4">
+              <input
+                id="cpassword"
+                class="px-2"
+                type="password"
+                placeholder="Confirm Password"
+              />
+            </div>
+            <div class="col-4">
+              <input class="px-2" id="date" type="date" placeholder="DOB" />
+            </div>
+            <div class="col-4">
+              <input
+                class="px-2"
+                id="zcode"
+                type="text"
+                placeholder="Zip Code"
+              />
+            </div>
+          </div>
+          <div class="submit_button d-flex justify-content-end mt-5">
+            <div>
+              <button class="btn btn-primary mx-2" type="button">Submit</button>
+            </div>
+            <div>
+              <button
+                class="btn btn-danger"
+                type="reset"
+                value="reset"
+                id="reset"
+              >
+                Cancel
+              </button>
+            </div>
+            <div id="input-id"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script src="./app.js"></script>
+    <script>
+      var url = new URL(window.location.href);
+      var searchParams = new URLSearchParams(url.search);
+      var id = searchParams.get("id");
+      if (id) {
+        var element = document.getElementById("input-id");
+        element.innerHTML =
+          '<input class="px-2" id="id" type="hidden" value="' + id + '" />';
+      }
+    </script>
+  </body>
+</html>
